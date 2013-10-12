@@ -1,6 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <!-- interface-requires gtk+ 3.0 -->
+  <object class="GtkWindow" id="initial_config">
+    <property name="can_focus">False</property>
+    <child>
+      <object class="GtkBox" id="box3">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkLabel" id="label1">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Device</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entry2">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="invisible_char">•</property>
+            <property name="text" translatable="yes">/dev/ttyACM0</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label2">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Baud Rate</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entry3">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="invisible_char">•</property>
+            <property name="text" translatable="yes">9600</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">3</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
   <object class="GtkListStore" id="liststore1">
     <columns>
       <!-- column-name list_entries -->
@@ -50,7 +110,6 @@
             <property name="can_focus">False</property>
             <child>
               <object class="GtkMenuItem" id="menuitem3">
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="label" translatable="yes">_Edit</property>
@@ -61,7 +120,6 @@
                     <property name="can_focus">False</property>
                     <child>
                       <object class="GtkMenuItem" id="settings_button">
-                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="label" translatable="yes">Edit Commands</property>
@@ -88,11 +146,9 @@
             <child>
               <object class="GtkButton" id="button1">
                 <property name="label" translatable="yes">button</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <property name="use_action_appearance">False</property>
                 <signal name="clicked" handler="send_message" swapped="no"/>
               </object>
               <packing>
@@ -105,11 +161,9 @@
             <child>
               <object class="GtkButton" id="button2">
                 <property name="label" translatable="yes">button</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <property name="use_action_appearance">False</property>
                 <signal name="clicked" handler="send_message" swapped="no"/>
               </object>
               <packing>
@@ -122,11 +176,9 @@
             <child>
               <object class="GtkButton" id="button3">
                 <property name="label" translatable="yes">button</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <property name="use_action_appearance">False</property>
                 <signal name="clicked" handler="send_message" swapped="no"/>
               </object>
               <packing>
@@ -139,11 +191,9 @@
             <child>
               <object class="GtkButton" id="button4">
                 <property name="label" translatable="yes">button</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <property name="use_action_appearance">False</property>
                 <signal name="clicked" handler="send_message" swapped="no"/>
               </object>
               <packing>
@@ -156,11 +206,9 @@
             <child>
               <object class="GtkButton" id="button5">
                 <property name="label" translatable="yes">button</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <property name="use_action_appearance">False</property>
                 <signal name="clicked" handler="send_message" swapped="no"/>
               </object>
               <packing>
@@ -173,11 +221,9 @@
             <child>
               <object class="GtkButton" id="button6">
                 <property name="label" translatable="yes">button</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <property name="use_action_appearance">False</property>
                 <signal name="clicked" handler="send_message" swapped="no"/>
               </object>
               <packing>
@@ -190,11 +236,9 @@
             <child>
               <object class="GtkButton" id="button7">
                 <property name="label" translatable="yes">button</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <property name="use_action_appearance">False</property>
                 <signal name="clicked" handler="send_message" swapped="no"/>
               </object>
               <packing>
@@ -207,11 +251,9 @@
             <child>
               <object class="GtkButton" id="button8">
                 <property name="label" translatable="yes">button</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <property name="use_action_appearance">False</property>
                 <signal name="clicked" handler="send_message" swapped="no"/>
               </object>
               <packing>
@@ -224,11 +266,9 @@
             <child>
               <object class="GtkButton" id="button9">
                 <property name="label" translatable="yes">button</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <property name="use_action_appearance">False</property>
                 <signal name="clicked" handler="send_message" swapped="no"/>
               </object>
               <packing>
