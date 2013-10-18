@@ -45,6 +45,8 @@ int main(int argc, char **argv)
 {
 	gtk_init(&argc, &argv);
 	
+	const int baud_rates[] = { B300, B600, B1200, B1800, B2400, B4800, B9600, B19200, B38400, B57600, B115200 };
+	
 	struct termios config;
 	int fd;
 	pthread_t poll_thread;
